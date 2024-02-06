@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Comic Sans MS;
+}
+
+body {
+    height: 1000px;
+    width: 100%;
+}
+
+/* css for main and panel */
+.main {
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(rgb(190, 69, 190), rgb(73, 73, 223), rgb(221, 78, 102));
+}
+
+.panel {
+    height: 800px;
+    width: 90%;
+    overflow: hidden;
+    background:linear-gradient(rgb(192, 168, 192), rgb(126, 126, 187), rgb(226, 140, 154));
+    border-radius: 10px;
+    position: relative;
+}
+
+.panel::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.panel::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+
+.panel::before, .panel::after {
+    background:linear-gradient(235deg, #89ff00, #060c21, #00bcd4) ;
+}
+
+.ptop {
+    height: 70px;
+    background-color: rgb(131, 24, 231);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.elem {
+    height: 60px; 
+    width: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    height: 100%;
+    width: 70px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: rgb(215, 184, 230);
+    color: rgb(87, 18, 151);
+    font-size: 30px;
+    text-align: center;
+    font-weight: 80px;
+    display: block;
+}
+
+.elem h4 {
+    font-size: 30px;
+}
+
+/* css for bubbles */
+.pbot {
+    height: calc(800px - 70px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bubble {
+    margin: 10px;
+    height: 70px;
+    width: 70px;
+    font-size: 50px;
+    font-weight: 100px;
+    text-align: center;
+    background-color: rgb(148, 45, 245);
+    color: rgb(37, 8, 65);
+    border-radius: 50px;
+}
+
+.bubble:hover {
+    background-color: rgb(86, 26, 143);
+    cursor: pointer;
+}
+
+.new {
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: #434b3b;
+    border-radius: 1rem;
+    border: none;
+    color: rgb(240, 240, 161);
+}
+
+.hide {
+    display: none;
+}
